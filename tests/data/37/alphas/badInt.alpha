@@ -1,0 +1,24 @@
+type int2int: integer -> integer
+type bool2bool: Boolean -> Boolean
+
+function doAllIntOps: int2int
+doAllIntOps(x) := {
+	[integer: plus; integer: minus; integer: mul; integer: div; integer: modulo; Boolean: badInt; integer: badAssignment ]
+	plus := 10;
+	minus := 5;
+	mul := 2;
+	div := 2;
+	modulo := 4;
+	badInt := true;
+	badAssignment := true;
+	x := x + plus;
+	x := x - minus;
+	x := x * mul;
+	x := x / div;
+	x := x % modulo;
+	x:= x % badInt;
+	x:= badInt - x;
+	x:= badInt + badInt;
+	x:= badInt / minus;
+	return x;
+}

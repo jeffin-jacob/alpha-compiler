@@ -1,0 +1,9 @@
+type T: integer -> integer
+
+function identity : T
+
+identity(x) := {
+    [address: a]
+    a := reserve a;
+    return x;
+}

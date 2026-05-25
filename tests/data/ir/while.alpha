@@ -1,0 +1,10 @@
+type T1: integer -> integer
+function square: T1
+square(x) := {
+    [integer: a; integer: b]
+    b := 1;
+    while (a < 10) {
+        b := 2*b;
+        a := a+1;
+    }
+}

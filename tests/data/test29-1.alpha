@@ -1,0 +1,11 @@
+type T: integer -> integer
+
+function identity : T
+
+identity(x) := {
+    [integer: i]
+    while ("Hello, world!") {
+        i := i + 1;
+    }
+    return x;
+}

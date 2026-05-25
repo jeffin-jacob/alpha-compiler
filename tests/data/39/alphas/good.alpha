@@ -1,0 +1,44 @@
+type int2int: integer -> integer
+type bool2bool: Boolean -> Boolean
+
+function doAllIntOps: int2int
+function doAllBoolOps: bool2bool
+doAllIntOps(x) := {
+	[integer: plus; integer: minus; integer: mul; integer: deevo; integer: modulo ]
+	plus := 10;
+	minus := 5;
+	mul := 2;
+	deevo := 2;
+	modulo := 4;
+	x := x + plus;
+	x := x - minus;
+	x := x * mul;
+	x := x / deevo;
+	x := x % modulo;
+	return x;
+}
+doAllBoolOps(bool) := {
+	[Boolean: andBool; Boolean: orBool; integer: lessInt; integer: equalInt; integer: compInt]
+	andBool := true;
+	orBool := false;
+	lessInt := 5;
+	equalInt := 5;
+	compInt := 10;
+	bool := bool & andBool;
+	bool := bool | orBool;
+	bool := !bool;
+	if ( lessInt < compInt) then {
+		bool := bool & andBool; 
+	
+	}
+	else{
+		bool := bool & !andBool;
+	}
+	if(lessInt = equalInt) then{
+		bool := bool | orBool;
+	}
+	else{
+		bool := bool | !orBool;
+	}
+	return bool;
+}

@@ -1,0 +1,10 @@
+(* valid
+(* comment *)
+
+foo(x) := {
+ a := "valud";
+ b := " \" also valid \t \\    ";
+ c := "not
+ valid";
+ d := 5;
+ }

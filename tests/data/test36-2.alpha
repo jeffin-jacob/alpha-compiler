@@ -1,0 +1,17 @@
+type T : integer -> integer
+
+function bar : T
+
+type int_array : 1 -> integer
+
+bar(a) := {
+    [int_array : arr;
+     integer : b;
+     integer : c;
+     integer : d]
+    b := 3;
+    c := 5;
+    a := arr(b * c + 34);
+    d := a + c * b; 
+    return d;
+}

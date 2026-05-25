@@ -1,0 +1,7 @@
+type T1: integer -> integer
+function square: T1
+square(x) := {
+    [Boolean: a; Boolean: b]
+    a := true | false;
+    b := false & a;
+}

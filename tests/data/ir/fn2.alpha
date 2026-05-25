@@ -1,0 +1,14 @@
+type T1: integer -> integer
+
+function square: T1
+function cube: T1
+
+square(x) := {
+    return x*x;
+}
+
+cube(x) := {
+    [integer: i]
+    i := square(x);
+    return i*x;
+}

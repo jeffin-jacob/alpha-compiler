@@ -1,0 +1,12 @@
+
+type int2char: integer -> character
+type rec: [integer: x; character: y]
+type Arr: 3 -> integer
+
+function square : int2int
+
+
+square(x) := {
+    return x * x;
+}
+

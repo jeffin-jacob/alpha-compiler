@@ -1,0 +1,14 @@
+type T1: integer -> integer
+function square: T1
+square(x) := {
+    [Boolean: a; integer: b]
+    a := true;
+
+    if (a) then {
+        b := 1;
+    }
+    else {
+        b := 2;
+    }
+    return 20;
+}

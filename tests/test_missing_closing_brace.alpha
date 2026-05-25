@@ -1,0 +1,4 @@
+function entry : string2int
+
+entry(arg) := {
+return 0;

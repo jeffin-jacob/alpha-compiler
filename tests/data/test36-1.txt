@@ -1,0 +1,10 @@
+[0]: function foo:
+[1]: $0 = 4
+[2]: $1 = 0
+[3]: $2 = arr[$1]
+[4]: $3 = $0 < $2
+[5]: $4 = !$3
+[6]: goto [8] if [$4]
+[7]: goto [9] iffalse [$4]
+[8]: <segmentation fault>
+[9]: <end of program>

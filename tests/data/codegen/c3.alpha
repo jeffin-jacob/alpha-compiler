@@ -1,0 +1,14 @@
+type int2int: integer -> integer
+
+function foo : int2int
+
+foo(x) := {
+[ integer: a ; integer: b ; integer: c; Boolean: q]
+a := 10;
+b := 2;
+b := b/a;
+b := a-1;
+c := b%a;
+
+return c;
+}

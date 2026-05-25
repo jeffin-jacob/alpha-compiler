@@ -1,0 +1,21 @@
+type T : integer -> integer
+
+function foo : T
+
+foo(x) := {
+    [
+    character : c;
+    integer : i
+    ]
+    i := 4;
+    c := '4';
+    i := c;
+    i := i + c;
+    i := i * c;
+    i := i - c;
+    i := i / c;
+    i := i * i;
+    c := reserve i;
+    i := release c;
+    return c;
+}

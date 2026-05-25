@@ -1,0 +1,8 @@
+type bleh: [integer: a; integer: b]
+type T1: bleh -> integer
+
+function mul: T1
+
+mul as (a, b, c, d) := {
+    return a*b;
+}

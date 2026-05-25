@@ -1,0 +1,11 @@
+type T : integer -> integer
+
+function foo : T
+
+type int_array : 1 -> integer
+
+foo(x) := {
+    [int_array : arr]
+    x := arr(4);
+    return x;
+}

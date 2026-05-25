@@ -1,0 +1,24 @@
+type intArr: 1 -> integer
+
+type s2i: string -> integer
+
+function entry: s2i
+
+entry(arg) := {
+    [intArr: bleh; integer: i; integer: j; integer: throwaway]
+    bleh := reserve bleh(2);
+    bleh(0) := 3;
+    bleh(1) := 7;
+
+    throwaway := printInteger(bleh(0));
+    throwaway := printInteger(bleh(1));
+    if (bleh(0) < bleh(1)) then {
+        throwaway := printCharacter('L');
+    }
+    else {
+        throwaway := printCharacter('G');
+    }
+    throwaway := printCharacter('\n');
+    return 0;
+}
+

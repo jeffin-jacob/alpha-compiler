@@ -1,0 +1,6 @@
+(* this is the first comment, should be line 1 col 1 *)
+
+
+
+
+           (*this is the second comment, this should be picked up *)

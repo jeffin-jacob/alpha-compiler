@@ -1,0 +1,19 @@
+entry(arg) := {
+    x := 4;
+    while (true) {
+        x := 3;
+    }
+    if (false) then {
+        return 8;
+    } else {
+        y := 5;
+    }
+    z := null;
+    y := x;
+    while (x = 8) {
+        return 9;
+    }
+    a := 10;
+    bar := foo;
+    return 7;
+}

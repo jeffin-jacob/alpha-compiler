@@ -1,0 +1,16 @@
+type T1: integer -> integer
+
+type rec : [integer: a; Boolean: b]
+function square: T1
+square(x) := {
+    [integer: p; Boolean: w]
+    if (x = 5) then {
+        [integer: q]
+        x := 8;
+    }
+    else {
+        [integer: r]
+        x := 2;
+    }
+    return x*x;
+}

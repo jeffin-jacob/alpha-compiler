@@ -1,0 +1,10 @@
+type rec : [integer: a; integer: b]
+
+type T1: rec -> integer
+
+function times: T1
+
+times as(x, y) := {
+    [Boolean: w]
+    return x*y;
+}

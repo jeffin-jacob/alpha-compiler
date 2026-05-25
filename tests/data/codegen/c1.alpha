@@ -1,0 +1,14 @@
+type int2int: integer -> integer
+
+function foo : int2int
+
+foo(x) := {
+[ integer: a ; integer: b ; integer: c]
+a := 5;
+c := a + b;
+c := c - a;
+c := a * c;
+c := -c;
+
+return c;
+}

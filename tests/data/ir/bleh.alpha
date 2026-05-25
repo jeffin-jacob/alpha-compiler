@@ -1,0 +1,28 @@
+type T1: integer -> integer
+type T2: integer -> Boolean
+type blerp: [Boolean: bug; integer: iug]
+
+function isEven: T2
+function square: T1
+function cubeOr4: T1
+
+isEven(x) := {
+    return ((x%2)=0);
+}
+
+square(x) := {
+    return x*x;
+}
+
+cubeOr4(x) := {
+    [Boolean: b; integer: i]
+    i := square(x);
+    b := isEven(x);
+    return x;
+
+    if (b) then {    [Boolean: b; integer: i]
+        return x*square(x);
+    } else {    [integer: pingas]
+        return square(x*x);
+    }
+}

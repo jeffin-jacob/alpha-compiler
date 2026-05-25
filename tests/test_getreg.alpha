@@ -1,0 +1,47 @@
+type int2int: integer -> integer
+
+function foo : int2int
+
+foo(x) := {
+[ integer: a ; integer: b ; integer: c; Boolean: q]
+q := true | false;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+q := !q;
+a := 5;
+c := a + b;
+c := (c - b) * a + b;
+c := a * c;
+c := -c;
+c := -c;
+c := -c;
+c := -c;
+c := -c;
+c := -c;
+c := -c;
+c := -c;
+c := -c;
+c := -c;
+if (a < c) then {
+ a := 1;
+} else {
+ b := 2;
+}
+
+
+return c;
+}

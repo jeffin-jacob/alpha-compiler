@@ -1,0 +1,17 @@
+[0]: function trimul:
+[1]: $0 = x * y
+[2]: $1 = $0 * z
+[3]: return $1
+[4]: function e:
+[5]: $2 = 2
+[6]: $3 = $2 * x
+[7]: y = $3
+[8]: $4 = 3
+[9]: $5 = $4 * y
+[10]: z = $5
+[11]: param x
+[12]: param y
+[13]: param z
+[14]: $6 = trimul() [3 params]
+[15]: a = $6
+[16]: <end of program>

@@ -1,0 +1,14 @@
+[0]: $0 = 1
+[1]: b = $0
+[2]: $1 = 10
+[3]: $2 = a < $1                   //set $2 to bool comparison between a and 10
+[4]: goto [6] if [$2]              //instruction inside while if cond true
+[5]: goto [13] iffalse [$2]        //instruction after while if cond false
+[6]: $3 = 2
+[7]: $4 = $3 * b
+[8]: b = $4
+[9]: $5 = 1
+[10]: $6 = a + $5
+[11]: a = $6
+[12]: goto [2]                     //go back to head of comparison expression (setting tempvar to 10)
+[13]: <end of program>

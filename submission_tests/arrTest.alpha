@@ -1,0 +1,31 @@
+type intArr: 1 -> integer
+type t1: intArr -> integer
+
+type s2i: string -> integer
+
+function sumArr: t1
+function entry: s2i
+
+sumArr(x) := {
+    [integer: entryCount; integer: i; integer: curEntry; integer: sum; integer: aba]
+
+	entryCount := x._1;
+	sum := 0;
+	i := 0;
+	while( i < entryCount){
+        curEntry := x(i); 
+		sum := sum + curEntry;
+		i := i + 1;
+	}
+	return sum;
+}
+
+entry(arg) := {
+    [intArr: bleh; integer: ok]
+    bleh := reserve bleh(3);
+    bleh(0) := 1;
+    bleh(1) := 5;
+    bleh(2) := 7;
+    return printInteger(sumArr(bleh));
+    return 0;
+}

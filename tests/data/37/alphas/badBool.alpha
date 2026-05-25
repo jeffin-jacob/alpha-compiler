@@ -1,0 +1,29 @@
+type bool2bool: Boolean -> Boolean
+
+function doAllBoolOps: bool2bool
+doAllBoolOps(bool) := {
+	[Boolean: andBool; Boolean: orBool; integer: lessInt; integer: equalInt; integer: compInt]
+	andBool := true;
+	orBool := false;
+	lessInt := 5;
+	equalInt := 5;
+	compInt := 10;
+	bool := bool & andBool;
+	bool := bool | orBool;
+	bool := !bool;
+	if ( lessInt + compInt) then {
+		bool := bool & andBool; 
+	
+	}
+	else{
+		bool := bool & equalInt;
+	}
+	if(lessInt = equalInt) then{
+		bool := compInt | equalInt;
+	}
+	else{
+		bool := !compInt;
+	}
+	bool := equalInt;
+	return bool;
+}

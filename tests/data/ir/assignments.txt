@@ -1,0 +1,7 @@
+[0]: $0 = 2
+[1]: a = $0
+[2]: goto [3]
+[3]: b = true
+[4]: goto [6]
+[5]: b = false
+[6]: <end of program>

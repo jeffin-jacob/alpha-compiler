@@ -1,0 +1,19 @@
+type IntPair : [integer : x; integer : y]
+
+type T1 : IntPair -> Boolean
+type T2 : integer -> Boolean
+
+function fun1 : T1
+function fun2 : T2
+
+fun1 as (x, y) := {
+    [Boolean : b]
+    b := x = y;
+    return b;
+}
+
+fun2(x) := {
+    [Boolean : b]
+    b := fun1(x, x);
+    return b;
+}

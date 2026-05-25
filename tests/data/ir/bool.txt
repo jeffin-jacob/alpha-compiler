@@ -1,0 +1,12 @@
+[0]: goto [2]                    //notice how a is set to true without looking at false const in '|'
+[1]: goto [4]
+[2]: a = true
+[3]: goto [5]
+[4]: a = false
+[5]: goto [10]                   //notice how b is set to false without ever comparing with 'a' in '&'
+[6]: goto [8] if [a]
+[7]: goto [10] iffalse [a]
+[8]: b = true
+[9]: goto [11]
+[10]: b = false
+[11]: <end of program>

@@ -1,0 +1,21 @@
+type int2int: integer -> integer
+
+function foo : int2int
+
+foo(x) := {
+    [ integer: a ; integer: b ; integer: c ; integer: d ; integer: e ; integer: f ; integer: g ; integer: h ; integer: i ; integer: j ; integer: k ; integer: l ; integer: m ]
+    a := 1;
+    b := 2;
+    c := a + b;
+    d := c + a;
+    e := d + b;
+    f := e + c;
+    g := f + d;
+    h := g + e;
+    i := h + f;
+    j := i + g;
+    k := j + h;
+    l := k + i;
+    m := l + j;
+    return m;
+}

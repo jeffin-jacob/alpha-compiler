@@ -1,0 +1,114 @@
+type intArr: 1 -> integer
+type t1: intArr -> integer
+
+type s2i: string -> integer
+type mparam : [intArr: arr; integer: l; integer: m; integer: r]
+type mparammap : mparam -> integer
+type msparam : [intArr: arr; integer: l; integer: r]
+type msparammap : msparam -> integer
+
+function sumArr: t1
+function merge: mparammap
+function mergeSort: msparammap
+function entry: s2i
+
+merge as(arr, l, m, r) := {
+    [integer: i; integer: j; integer: k; integer: n1; integer: n2; intArr: L; intArr: R; integer: throwaway; integer: t1; integer: t2]
+    n1 := m - l + 1;
+    n2 := r - m;
+    L := reserve L(n1);
+    R := reserve R(n2);
+
+    i := 0;
+    j := 0;
+    while (i < n1) {
+        L(i) := arr(l+i);
+        
+        i := i + 1;
+    }
+
+    while (j < n2) {
+        R(j) := arr(m+1+j);
+        j := j + 1;
+    }
+
+    i := 0;
+    j := 0;
+    k := l;
+    while (i < n1 & j < n2) {
+        t1 := L(i);
+        t2 := R(j);
+        if (t1 < t2) then {
+        (*if (L(i) < R(j)) then {*)
+            arr(k) := L(i);
+            i := i + 1;
+        }
+        else {
+            arr(k) := R(j);
+            j := j + 1;
+        }
+        k := k + 1;
+    }
+
+    while (i < n1) {
+        arr(k) := L(i);
+        i := i + 1;
+        k := k + 1;
+    }
+
+    while (j < n2) {
+        arr(k) := R(j);
+        j := j + 1;
+        k := k + 1;
+    }
+
+    (*verify if L sorted*)
+    i := 0;
+    while (i < L._1) {
+        i := i + 1;
+    }
+
+    return 0;
+}
+
+mergeSort as(arr, l, r) := {
+    [integer: m; integer: throwaway]
+    if (l < r) then {
+        m := l + (r-l) / 2;
+
+        throwaway := mergeSort(arr, l, m);
+        throwaway := mergeSort(arr, m+1, r);
+
+        throwaway := merge(arr, l, m, r);
+    }
+    else {
+        return 0;
+    }
+
+    return 0;
+}
+
+entry(arg) := {
+    [intArr: bleh; integer: i; integer: throwaway]
+    bleh := reserve bleh(10);
+    bleh(0) := 4;
+    bleh(1) := 2;
+    bleh(2) := 8;
+    bleh(3) := 6;
+    bleh(4) := 7;
+    bleh(5) := 3;
+    bleh(6) := 1;
+    bleh(7) := 10;
+    bleh(8) := 9;
+    bleh(9) := 5;
+
+    i := mergeSort(bleh, 0, bleh._1-1);
+
+    i := 0;
+    while (i < bleh._1) {
+        throwaway := printInteger(bleh(i));
+        throwaway := printCharacter('\n');
+        i := i + 1;
+    }
+    return 0;
+}

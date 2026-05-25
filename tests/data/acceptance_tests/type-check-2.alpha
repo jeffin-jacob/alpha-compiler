@@ -1,0 +1,19 @@
+type T : integer -> integer
+
+function bar : T
+
+bar(x) := {
+    [
+    Boolean : b;
+    integer : i
+    ]
+    i := 8;
+    b := false;
+    b := !b;
+    if (i) then {
+        i := i * 4;
+    } else {
+        i := i + 4;
+    }
+    return x;
+}

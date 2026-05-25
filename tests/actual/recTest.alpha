@@ -1,0 +1,30 @@
+type rec: [integer: x; character: a; Boolean: b; integer: y]
+type t1: rec -> rec
+type s2i: string -> integer
+
+function foo: t1
+function entry: s2i
+
+foo(z) := {
+   [integer: a; integer: b]
+   a := z.x;
+   b := z.y;
+   z.x := a * b;
+   z.y := a + b;
+   return z;
+
+}
+
+entry(arg) := {
+    [rec: bleh; integer: t]
+    bleh := reserve bleh;
+    bleh.x := 10;
+    bleh.a := 'a';
+    bleh.b := true;
+    bleh.y := 11;
+    t := printInteger(bleh.x);
+    t := printCharacter(bleh.a);
+    t := printBoolean(bleh.b);
+    t := printInteger(bleh.y);
+    return t;
+}

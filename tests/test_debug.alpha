@@ -1,0 +1,7 @@
+function foo : undefinedType
+
+
+foo(x) := {
+    return 0;
+
+}

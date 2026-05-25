@@ -1,0 +1,7 @@
+type T1: integer -> integer
+function square: T1
+square(x) := {
+    [integer: a; integer: b]
+    a := 2*5;
+    b := (1+5)*a;
+}

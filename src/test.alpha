@@ -1,0 +1,14 @@
+(* Test Integers and Operators *)
+123 + 456
+x := 789 * 2
+
+(* Test Strings and Escapes *)
+"Hello World"
+"Escape\nSequence"
+"Quote \" inside"
+
+(* Test Characters *)
+'a' '\n'
+
+(* Test Keywords *)
+if while integer

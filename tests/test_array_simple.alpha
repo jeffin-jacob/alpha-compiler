@@ -1,0 +1,8 @@
+type intarr: 1 -> integer
+type int2int: integer -> integer
+
+function foo : int2int
+
+foo(x) := {
+return x;
+}

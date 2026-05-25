@@ -1,0 +1,20 @@
+type rec: integer: x; integer: y]
+type T1: integer -> integer
+type T2: rec -> integer
+
+function foo : T1
+function bar1 : T2
+function bar2 : T2
+
+foo(x) := {
+    return x * x;
+}
+
+bar1(a) := {
+    return a.x * a.y;
+}
+
+bar2 as (r,s) := {
+    return r * s;
+}
+

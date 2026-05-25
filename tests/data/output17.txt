@@ -1,0 +1,76 @@
+( <identifier> )
+ASSIGN, 608
+ID, token: 101, content: x
+ASSIGN, 608
+C_INTEGER, 301, content: 4
+EXPR_CONST, 903
+<assignable> <assignOp> <expression>
+305
+EXPR_CONST, 903
+ID, token: 101, content: x
+ASSIGN, 608
+C_INTEGER, 301, content: 3
+EXPR_CONST, 903
+<assignable> <assignOp> <expression>
+<simple-statement> ;
+{ <statement-list> }
+while ( <expression> ) <sblock>
+306
+EXPR_CONST, 903
+C_INTEGER, 301, content: 8
+EXPR_CONST, 903
+return <expression>
+<simple-statement> ;
+{ <statement-list> }
+ID, token: 101, content: y
+ASSIGN, 608
+C_INTEGER, 301, content: 5
+EXPR_CONST, 903
+<assignable> <assignOp> <expression>
+<simple-statement> ;
+{ <statement-list> }
+if ( <expression> ) then <sblock> else <sblock>
+ID, token: 101, content: z
+ASSIGN, 608
+302
+EXPR_CONST, 903
+<assignable> <assignOp> <expression>
+ID, token: 101, content: y
+ASSIGN, 608
+ID, token: 101, content: x
+EXPR_ASSIGNABLE, 915
+<assignable> <assignOp> <expression>
+ID, token: 101, content: x
+EXPR_ASSIGNABLE, 915
+C_INTEGER, 301, content: 8
+EXPR_CONST, 903
+EXPR_EQ, 914
+C_INTEGER, 301, content: 9
+EXPR_CONST, 903
+return <expression>
+<simple-statement> ;
+{ <statement-list> }
+while ( <expression> ) <sblock>
+ID, token: 101, content: a
+ASSIGN, 608
+C_INTEGER, 301, content: 10
+EXPR_CONST, 903
+<assignable> <assignOp> <expression>
+ID, token: 101, content: bar
+ASSIGN, 608
+ID, token: 101, content: foo
+EXPR_ASSIGNABLE, 915
+<assignable> <assignOp> <expression>
+C_INTEGER, 301, content: 7
+EXPR_CONST, 903
+return <expression>
+<simple-statement> ;
+<simple-statement> ; <statement-list>
+<simple-statement> ; <statement-list>
+<compound-statement> <statement-list>
+<simple-statement> ; <statement-list>
+<simple-statement> ; <statement-list>
+<compound-statement> <statement-list>
+<compound-statement> <statement-list>
+<simple-statement> ; <statement-list>
+{ <statement-list> }

@@ -1,0 +1,12 @@
+[0]: goto [1]
+[1]: a = true
+[2]: goto [4]
+[3]: a = false
+[4]: goto [6] if [a]                  //going to true branch that sets b to 1
+[5]: goto [9] iffalse [a]             //going to false branch that sets b to 2
+[6]: $1 = 1
+[7]: b = $1
+[8]: goto [11]                        //at end of sblock inside 'then' there is goto to next instr after else
+[9]: $2 = 2
+[10]: b = $2
+[11]: <end of program>

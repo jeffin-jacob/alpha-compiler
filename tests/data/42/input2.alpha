@@ -1,0 +1,28 @@
+type IntTriple : [integer : i1; integer : i2; integer : i3]
+type IntPair : [integer : i1; integer : i2]
+
+type T1 : IntTriple -> Boolean
+type T2 : IntPair -> Boolean
+
+function fun1 : T1
+function fun2 : T2
+
+fun1 as (x, y, z) := {
+    [Boolean : b]
+    if (x = y) then {
+        b := true;
+    } else {
+        if (x = z) then {
+            b := false;
+        } else {
+            b := true;
+        }
+    }
+    return b;
+}
+
+fun2 as (x, y) := {
+    [Boolean : b]
+    b := fun1(x, y, x);
+    return b;
+}

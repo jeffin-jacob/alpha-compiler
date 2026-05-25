@@ -1,0 +1,23 @@
+type s2i: string -> integer
+
+function printString: s2i
+function entry: s2i
+
+printString(x) := {
+    [integer: i; integer: throwaway]
+    i := 0;
+    while (i < x._1) {
+        throwaway := printCharacter(x(i));
+        i:= i+1;
+    }
+    throwaway := printCharacter('\n');
+    return 0;
+
+}
+
+entry(x) := {
+    [string: printme; integer: throwaway]
+    printme := "Hello world!";
+    throwaway := printString(printme);
+    return 0;
+}

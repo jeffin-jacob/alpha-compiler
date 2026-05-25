@@ -1,0 +1,21 @@
+type int2int: integer -> integer
+type s2i: string -> integer
+
+function nominalTest: int2int
+function entry: s2i
+
+nominalTest(x) := {
+[integer: multiply;integer: retVal]
+multiply := 3;
+retVal := x * multiply;
+return retVal;
+}
+
+entry(arg) := {
+    [integer: bob]
+    bob := nominalTest(10);
+
+    bob := printInteger(bob);
+    bob := printCharacter('a');
+    return 0;
+}

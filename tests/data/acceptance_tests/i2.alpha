@@ -1,0 +1,10 @@
+type rec: [integer: x; integer: y]
+type T1: integer -> integer
+
+function foo: T1
+
+foo(x) := { (*awesome function*)
+    return x*(x+x)+100;
+}
+
+string b := "look a quote -> \" and a backslash -> \\";

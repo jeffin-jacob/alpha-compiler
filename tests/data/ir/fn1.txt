@@ -1,0 +1,4 @@
+[0]: function square:
+[1]: $0 = x * x
+[2]: return $0
+[3]: <end of program>

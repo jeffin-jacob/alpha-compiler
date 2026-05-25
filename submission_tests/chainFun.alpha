@@ -1,0 +1,51 @@
+type t1: integer -> integer
+type s2i: string -> integer
+type rec: [integer: x; Boolean: switcher]
+type funcSwitcher: Boolean -> t1
+type t2: rec -> integer
+function foo: t2
+function square:t1
+function factorial:t1
+function getT1: funcSwitcher
+function entry: s2i
+
+square(y) := {
+  return y * y;
+}
+factorial(a) := {
+ if(a < 2) then {
+   return 1;
+}
+ else {
+     return a * factorial(a - 1);
+}
+
+}
+getT1(check) := {
+[t1: retVal]
+if(check) then {
+  retVal := square;
+}
+else{
+  retVal := factorial;
+}
+return retVal;
+}
+
+foo(z) := {
+   [t1: curFunc]
+   curFunc := getT1(z.switcher);
+   return curFunc(z.x);
+
+}
+
+entry(arg) := {
+    [rec: t; integer: a]
+    t := reserve t;
+    t.x := 5;
+    t.switcher := true;
+    a := foo(t);
+    a := printInteger(a);
+    a := printCharacter('\n');
+    return a;
+}

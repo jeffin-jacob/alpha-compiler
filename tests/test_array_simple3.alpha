@@ -1,0 +1,12 @@
+type intarr: 1 -> integer
+type intarr2int: intarr -> integer
+
+
+function foo : intarr2int
+
+foo(arr) := {
+
+[ integer: x ]
+x := arr(0);
+return x;
+}

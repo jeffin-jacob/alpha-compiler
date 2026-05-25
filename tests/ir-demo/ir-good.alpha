@@ -1,0 +1,16 @@
+type Int_Array : 1 -> integer
+
+type Int_Array_Args : [Int_Array : array_1; Int_Array : array_2; integer : len]
+
+type Array_Copy_T : Int_Array_Args -> Int_Array
+
+function array_copy : Array_Copy_T
+
+array_copy as (source, target, len) := {
+    [integer : i]
+    while (i < len) {
+        target(i) := source(i);
+        i := i + 1;
+    }
+    return target;
+}

@@ -1,0 +1,4 @@
+identity(x) := {
+    [integer : i; Boolean : b; character : c; string : s]
+    return x;
+}
