@@ -1,6 +1,4 @@
-﻿# compiler-bell-labs
-
-# Notes on files
+﻿# Notes on files
 - Alpha files must have some type corresponding to a "string -> integer" and declare the `entry` function with that type
 
 # Notes on generating a running executable
